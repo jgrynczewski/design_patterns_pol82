@@ -1,6 +1,6 @@
 # polimorfizm - wielopostaciowość
 # typowanie statyczne
-# typowanie dynamiczne (statyczne, behiaworalne, duck typing)
+# typowanie dynamiczne (strukturalne, behawioralne, duck typing)
 class Animal:
     def speak(self):
         pass
