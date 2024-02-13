@@ -16,7 +16,7 @@ class Cow:
     def kill_yourself(self):
         self.is_alive = False
 
-    # metoda klasowy
+    # metoda klasowa
     @classmethod
     def change_species(cls):
         cls.species = "bird"
