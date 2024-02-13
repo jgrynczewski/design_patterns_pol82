@@ -13,6 +13,10 @@ class Cow:
     def speak(self):
         print(f"Muuuuu. Cześć nazywam się {self.name}")
 
+    @staticmethod
+    def get_circle_area(r):
+        return 3.14 * r**2
+
     def kill_yourself(self):
         self.is_alive = False
 
@@ -30,3 +34,6 @@ c2.speak()
 
 Cow.change_species()
 print(c.species)
+
+result = c.get_circle_area(1)
+print(result)
