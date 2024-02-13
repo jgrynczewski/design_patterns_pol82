@@ -1,6 +1,6 @@
 # Sprzężenia (couplings)
 class Cow:
-    def __init__(self, name, bell):
+    def __init__(self, name, bell: 'Bell'):
         self.name = name
         self.bell = bell
 
@@ -10,18 +10,18 @@ class Cow:
 
 class Bell:
     def __init__(self, sound):
-        self.voice = sound
+        self._sound = sound
 
     def ring(self):
-        print(self.voice)
+        print(self._sound)
 
 
 class Butcher:
     def __init__(self, name):
         self.name = name
 
-    def play_with(self, cow):
-        cow.ring_the_bell()
+    def play_with(self, cow: Cow):
+        cow.bell.ring()
 
 
 b1 = Bell("Ding Dong")
