@@ -1,3 +1,5 @@
+# enkapsulacja/hermetyzacja/kapsułkowanie
+
 # modyfikatory dostępu
 # w praktyce, w pythonie:
 # field - składowa publiczna  - wchodź, tutaj jesteś bezpieczny
