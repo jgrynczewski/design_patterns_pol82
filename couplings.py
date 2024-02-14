@@ -2,18 +2,18 @@
 class Cow:
     def __init__(self, name, bell: 'Bell'):
         self.name = name
-        self.bell = bell
+        self._bell = bell
 
     def ring_the_bell(self):
-        self.bell.ring()
+        self._bell.ring()
 
 
 class Bell:
     def __init__(self, sound):
-        self._sound = sound
+        self._voice = sound
 
     def ring(self):
-        print(self._sound)
+        print(self._voice)
 
 
 class Butcher:
@@ -21,7 +21,7 @@ class Butcher:
         self.name = name
 
     def play_with(self, cow: Cow):
-        cow.bell.ring()
+        cow.ring_the_bell()
 
 
 b1 = Bell("Ding Dong")

@@ -27,13 +27,16 @@ class Dog(IAnimal):
     def speak(self):
         print("Hauhauhau")
 
-# ========================================================================
+
+class Context:
+    def sing(animal: IAnimal) -> None:
+        animal.speak()
 
 
-def sing(animal: IAnimal) -> None:
-    animal.speak()
+# ================================================
 
 
 zoo = [Cow(), Horse(), Dog()]
+c = Context()
 for animal in zoo:
-    sing(animal)
+    c.sing(animal)
