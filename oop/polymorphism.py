@@ -29,7 +29,8 @@ class Dog(IAnimal):
 
 # ========================================================================
 
-def sing(animal):
+
+def sing(animal: IAnimal) -> None:
     animal.speak()
 
 
