@@ -1,25 +1,33 @@
 # polimorfizm - wielopostaciowość
-# typowanie statyczne
+# typowanie statyczne (aka nominalne)
 # typowanie dynamiczne (strukturalne, behawioralne, duck typing)
-class Animal:
+
+# interfejs - relacja typu IMPLEMENT (implementuje)
+import abc
+
+
+class IAnimal(abc.ABC):
+
+    @abc.abstractmethod
     def speak(self):
-        pass
+        """Abstract method speak"""
 
 
-class Cow(Animal):
+class Cow(IAnimal):
     def speak(self):
         print("Muuuuuuuu")
 
 
-class Horse(Animal):
+class Horse(IAnimal):
     def speak(self):
         print("Ihahahahaha")
 
 
-class Dog(Animal):
+class Dog(IAnimal):
     def speak(self):
         print("Hauhauhau")
 
+# ========================================================================
 
 def sing(animal):
     animal.speak()
